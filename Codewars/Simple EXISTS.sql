@@ -1,3 +1,4 @@
+/*
 For this challenge you need to create a SELECT statement that will contain data about departments that had a sale with a price over 98.00 dollars. 
 This SELECT statement will have to use an EXISTS to achieve the task.
 
@@ -17,12 +18,9 @@ sales table schema
 resultant table schema
 	id
 	name
+*/
 
 
-
-
-
-SOLUTION
 
 select d.id, d.name from departments as d where exists 
 (select s.name from sales as s where s.department_id = d.id and s.price > 98.00);
